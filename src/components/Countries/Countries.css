@@ -1,0 +1,22 @@
+.countries {
+  /* background: linear-gradient(to right, red, yellow); */
+  background: #5fc4a2;
+}
+
+.country-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+.loading-error .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-error p {
+  text-align: center;
+}
