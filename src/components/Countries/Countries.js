@@ -11,29 +11,9 @@ const Countries = () => {
     error,
   } = useSelector((store) => store.countries);
   const dispatch = useDispatch();
-  // const fetchCountries = async () => {
-  //   // await axios
-  //   //   .get("https://restcountries.com/v3.1/all")
-  //   //   .then((response) => {
-  //   //     setCountries(response.data);
-  //   //     setIsLoading(false);
-  //   //   })
-  //   //   .catch((err) => {
-  //   //     setError(err.message);
-  //   //     setIsLoading(false);
-  //   //   });
-  //   try {
-  //     const response = await axios.get("https://restcountries.com/v3.1/all");
-  //     setCountries(response.data);
-  //     setIsLoading(false);
-  //   } catch (err) {
-  //     setError(err.message);
-  //     setIsLoading(false);
-  //   }
-  // };
   useEffect(() => {
     dispatch(fetchCountries());
-  }, []);
+  }, [dispatch]);
   return (
     <div className="countries">
       <div className="loading-error">

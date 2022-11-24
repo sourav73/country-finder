@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./CountryCard.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fetchCountry, removeCountry } from "../../store/slices/country";
+import { openModal } from "../../store/slices/modal";
 
 const CountryCard = ({ country }) => {
   const dispatch = useDispatch();
-  const { country: singleCountry } = useSelector((store) => store.countries);
-  const { loading, error, details } = singleCountry;
-  useEffect(() => {
+  const getDetails = () => {
     dispatch(removeCountry());
+    dispatch(openModal());
     dispatch(fetchCountry(country.name.common));
-  }, []);
-  const getDetails = () => {};
+  };
   return (
     <div className="country-card">
       <div className="flag">

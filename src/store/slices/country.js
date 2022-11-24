@@ -23,6 +23,8 @@ export const countrySlice = createSlice({
   name: "country",
   initialState: {
     list: [],
+    filteredList: [],
+    letters: [],
     loading: false,
     error: null,
     country: {
@@ -33,7 +35,11 @@ export const countrySlice = createSlice({
   },
   reducers: {
     removeCountry: (countries) => {
-      countries.country = {};
+      countries.country = {
+        loading: false,
+        error: null,
+        details: {},
+      };
     },
   },
   extraReducers: (builder) => {
@@ -45,6 +51,11 @@ export const countrySlice = createSlice({
       countries.loading = false;
       countries.error = null;
       countries.list = action.payload;
+      countries.letters = [
+        ...new Set(
+          countries.list.map((country) => country.name.common[0]).sort()
+        ),
+      ];
     });
     builder.addCase(fetchCountries.rejected, (countries, action) => {
       countries.loading = false;
@@ -58,7 +69,7 @@ export const countrySlice = createSlice({
     builder.addCase(fetchCountry.fulfilled, (countries, action) => {
       countries.country.loading = false;
       countries.country.error = null;
-      countries.country.details = action.payload;
+      countries.country.details = action.payload[0];
     });
     builder.addCase(fetchCountry.rejected, (countries, action) => {
       countries.country.loading = false;

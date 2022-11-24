@@ -3,6 +3,7 @@ nav {
   padding-left: 1rem;
   background: lightcoral;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
@@ -41,15 +42,31 @@ nav {
   translate: 0 -7px;
 }
 
-.sidebar {
-  height: 95vh;
-  width: 300px;
-  background: lightcoral;
-  padding-block: 1rem;
-  margin-left: -300px;
-  transition: 0.3s;
+.search-form {
+  padding-right: 1rem;
+  position: relative;
 }
 
-.sidebar.active {
-  margin-left: 0;
+.search-form input {
+  width: 15rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.search-form input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-form button {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  height: 24px;
+}
+
+.search-form button:hover path {
+  fill: lightcoral;
 }
