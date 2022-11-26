@@ -24,6 +24,7 @@ export const countrySlice = createSlice({
   initialState: {
     list: [],
     filteredList: [],
+    filterBy: "All",
     letters: [],
     loading: false,
     error: null,
@@ -40,6 +41,9 @@ export const countrySlice = createSlice({
         error: null,
         details: {},
       };
+    },
+    changeFilterBy: (countries, action) => {
+      countries.filterBy = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -79,6 +83,6 @@ export const countrySlice = createSlice({
   },
 });
 
-export const { removeCountry } = countrySlice.actions;
+export const { removeCountry, changeFilterBy } = countrySlice.actions;
 
 export default countrySlice.reducer;

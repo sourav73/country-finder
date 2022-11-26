@@ -24,7 +24,6 @@ button {
 
 .countries {
   width: 100%;
-  padding-inline: 1.5rem;
-  padding-top: 1.5rem;
+  padding: 1rem;
   overflow-y: auto;
 }

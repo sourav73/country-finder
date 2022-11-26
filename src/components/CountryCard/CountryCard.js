@@ -17,7 +17,7 @@ const CountryCard = ({ country }) => {
         <img src={country.flags.png} alt={country.name.common} />
       </div>
       <div className="details">
-        <p>{country.name.common}</p>
+        <p className="country-name">{country.name.common}</p>
         <button onClick={getDetails}>View Details</button>
       </div>
     </div>

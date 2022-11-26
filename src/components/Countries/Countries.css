@@ -5,9 +5,8 @@
 
 .country-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
-  grid-auto-flow: dense;
 }
 
 .loading-error .loading {
@@ -19,4 +18,13 @@
 
 .loading-error p {
   text-align: center;
+}
+
+.filter-value {
+  margin-bottom: 1rem;
+}
+
+.filter-value p {
+  color: #fff;
+  font-weight: 500;
 }
