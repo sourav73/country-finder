@@ -48,7 +48,7 @@
   padding: 1rem;
   background: #5fc4a2;
   border-radius: 5px;
-  min-height: 450px;
+  min-height: 300px;
   min-width: 300px;
 }
 
@@ -58,4 +58,10 @@
   left: 50%;
   translate: -50% -50%;
   text-align: center;
+}
+
+.modal-content .country-details p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.15rem;
 }

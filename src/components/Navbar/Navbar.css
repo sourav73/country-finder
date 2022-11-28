@@ -41,32 +41,3 @@ nav {
   rotate: -225deg;
   translate: 0 -7px;
 }
-
-.search-form {
-  padding-right: 1rem;
-  position: relative;
-}
-
-.search-form input {
-  width: 15rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-}
-
-.search-form input[type="search"]::-webkit-search-cancel-button {
-  display: none;
-}
-
-.search-form button {
-  position: absolute;
-  top: 50%;
-  right: 2rem;
-  transform: translateY(-50%);
-  height: 24px;
-}
-
-.search-form button:hover path {
-  fill: lightcoral;
-}

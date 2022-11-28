@@ -1,0 +1,19 @@
+.country-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.country-image {
+  width: 70px;
+}
+
+.country-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.country-item button {
+  color: #fff;
+}
